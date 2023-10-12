@@ -1,0 +1,146 @@
+$loading-time: 1.2s;
+$animation-timing-function: ease-in-out;
+
+#load {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 119, 0);
+  background-color: rgb(90, 79, 70);
+  cursor: not-allowed;
+
+  .load-one {
+    -webkit-animation: loadOne $loading-time linear infinite;
+    animation: loadOne $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-two {
+    -webkit-animation: loadTwo $loading-time linear infinite;
+    animation: loadTwo $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-three {
+    -webkit-animation: loadThree $loading-time linear infinite;
+    animation: loadThree $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-four {
+    -webkit-animation: loadFour $loading-time linear infinite;
+    animation: loadFour $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-five {
+    -webkit-animation: loadFive $loading-time linear infinite;
+    animation: loadFive $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-six {
+    -webkit-animation: loadSix $loading-time linear infinite;
+    animation: loadSix $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+
+  .load-seven {
+    -webkit-animation: loadSeven $loading-time linear infinite;
+    animation: loadSeven $loading-time linear infinite;
+    animation-timing-function: $animation-timing-function;
+  }
+}
+
+@-webkit-keyframes loadOne {
+  0% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  7% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadOne {
+  0% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  7% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadTwo {
+  7% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  20% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadThree {
+  20% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  36% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadFour {
+  36% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  64% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadFive {
+  64% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  80% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadSix {
+  80% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  93% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+@keyframes loadSeven {
+  93% {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  100% {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

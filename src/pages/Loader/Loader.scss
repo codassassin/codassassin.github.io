@@ -1,0 +1,253 @@
+$breakpoint-mobile: 320px;
+$breakpoint-iphone: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1366px;
+$breakpoint-desktop: 1920px;
+
+#loader {
+    position: fixed;
+    background-color: #F5EFE1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 99;
+    animation: loader 4s;
+    animation-timing-function: steps(1, end);
+
+    .loader-wrap {
+        height: 100%;
+
+        .des-wrap {
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            grid-area: inner;
+            width: 100%;
+        }
+
+        .des {
+            overflow: hidden;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            pointer-events: none;
+        }
+
+        .des-inner {
+            display: block;
+            color: #000;
+            font-size: 6rem;
+            font-weight: 400;
+            line-height: 1.2;
+            font-family: "Monument", sans-serif;
+        }
+
+        .des-inner--stroke {
+            display: block;
+            font-size: 6rem;
+            font-weight: 400;
+            line-height: 1.2;
+            font-family: "Monument", sans-serif;
+            -webkit-text-stroke: 2px #0f0114;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            .des-inner {
+                font-size: 4.6rem;
+            }
+
+            .des-inner--stroke {
+                font-size: 4.6rem;
+            }
+        }
+
+        .des-1 {
+            opacity: 0;
+            animation: loaderOne 4s;
+            animation-timing-function: steps(1, end);
+        }
+
+        .des-2 {
+            opacity: 0;
+            animation: loaderTwo 4s;
+            animation-timing-function: steps(1, end);
+        }
+
+        .des-3 {
+            opacity: 0;
+            animation: loaderThree 4s;
+            animation-timing-function: steps(1, end);
+        }
+
+        .des-4 {
+            opacity: 0;
+            animation: loaderFour 4s;
+            animation-timing-function: steps(1, end);
+        }
+
+        .des-5 {
+            opacity: 0;
+            animation: loaderFive 4s;
+            animation-timing-function: steps(1, end);
+        }
+
+        .des-6 {
+            opacity: 1;
+            animation: loaderSix 4s;
+            animation-timing-function: steps(1, end);
+        }
+    }
+
+    .loading--change {
+        background-color: #0f0114;
+
+        .des-inner--stroke {
+            -webkit-text-stroke: 2px #F5EFE1;
+        }
+
+        .des-inner {
+            color: #F5EFE1;
+        }
+    }
+}
+
+@keyframes loaderOne {
+    7% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 0;
+    }
+    17% {
+        opacity: 1;
+    }
+    29% {
+        opacity: 0;
+    }
+}
+
+@keyframes loaderTwo {
+    5% {
+        opacity: 1;
+    }
+    13% {
+        opacity: 0;
+    }
+    19% {
+        opacity: 1;
+    }
+    31% {
+        opacity: 0;
+    }
+}
+
+@keyframes loaderThree {
+    0% {
+        opacity: 1;
+    }
+    11% {
+        opacity: 0;
+    }
+    21% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loaderFour {
+    0% {
+        opacity: 1;
+    }
+    9% {
+        opacity: 0;
+    }
+    23% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loaderFive {
+    0% {
+        opacity: 1;
+    }
+    7% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    37% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loaderSix {
+    0% {
+        opacity: 1;
+    }
+    5% {
+        opacity: 0;
+    }
+    27% {
+        opacity: 1;
+    }
+    55% {
+        color: #F5EFE1;
+    }
+    to {
+        opacity: 1;
+        color: #F5EFE1;
+    }
+}
+
+@keyframes loader {
+    55% {
+        background-color: rgb(0, 40, 104);
+    }
+    62% {
+        background-color: rgb(0, 123, 16);
+    }
+    69% {
+        background-color: rgb(152, 0, 0);
+    }
+    76% {
+        background-color: rgb(61, 0, 96);
+    }
+    83% {
+        background-color: #0f0114;
+    }
+    100% {
+        background-color: #0f0114;
+    }
+    to {
+        background-color: #0f0114;
+    }
+}

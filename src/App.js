@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useEffect, useState } from 'react';
+import './App.scss';
+import Loader from './pages/Loader/Loader';
+import Main from './pages/Main/Main';
+import DevToolsForbidden from './pages/Forbidden/DevToolsForbidden';
+import { ApplicationContext } from './context/ApplicationContext';
 
 function App() {
+  const {forbidden} = useContext(ApplicationContext);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 4500)
+    });
+
+    return () => {
+      window.removeEventListener('load', () => {});
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          {forbidden ? (
+            <DevToolsForbidden />
+          ) : (
+            <Main />
+          )}
+        </>
+      )}
+    </>
   );
 }
 

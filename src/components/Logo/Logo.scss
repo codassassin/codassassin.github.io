@@ -1,0 +1,43 @@
+$breakpoint-mobile: 320px;
+$breakpoint-iphone: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1366px;
+$breakpoint-desktop: 1920px;
+
+.solid-logo {
+    width: 100%;
+    height: auto;
+    transform: rotateZ(30deg) !important;
+    transition: all ease-in;
+    animation: logoFadeIn 4s;
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 70%;
+    }
+
+    @media (max-width: $breakpoint-laptop) {
+        width: 63%;
+    }
+
+    @media (max-width: $breakpoint-desktop) {
+        width: 60%;
+    }
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}

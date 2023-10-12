@@ -1,0 +1,169 @@
+$breakpoint-mobile: 320px;
+$breakpoint-iphone: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1366px;
+$breakpoint-desktop: 1920px;
+
+.aboutCont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 0;
+    align-items: center;
+    justify-content: center;
+
+    .about-cont-row {
+        display: flex;
+        gap: 20px;
+        width: 98%;
+        min-width: 320px;
+        padding: 15px 0;
+        color: #fff;
+
+        .about-cont-row-title {
+            width: 240px;
+            font-size: 20px;
+            font-weight: normal;
+            font-family: "Monument", sans-serif;
+            letter-spacing: 0.1rem;
+            color: rgb(126, 255, 236);
+        }
+
+        .about-cont-row-props-details {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: "inter", sans-serif;
+
+            .about-cont-row-props-details-top {
+                height: 55px;
+                display: flex;
+                align-items: flex-end;
+                gap: 15px;
+
+                .about-cont-row-prop-details-name {
+                    font-size: 45px;
+                    font-weight: 700;
+                    color: #e2e8f0;
+                    text-transform: uppercase;
+                }
+
+                .about-cont-row-prop-detail-top-comma {
+                    font-size: 20px;
+                    padding-bottom: 7px;
+                }
+
+                .about-cont-row-prop-details-age {
+                    height: 100%;
+                    display: flex;
+                    align-items: flex-end;
+                    font-size: 30px;
+                    font-weight: 500;
+                    padding-bottom: 7px;
+                }
+            }
+
+            .about-cont-row-prop-details-role {
+                font-size: 25px;
+                font-weight: 600;
+                color: #e2e8f0;
+            }
+
+            .about-cont-row-prop-details-contacts {
+                display: flex;
+                gap: 20px;
+                font-size: 14px;
+                color: #94a3b8;
+
+                .about-cont-row-prop-details-contact {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .about-cont-row-props {
+            width: 450px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-family: "inter", sans-serif;
+
+            .about-cont-row-prop {
+                display: flex;
+                align-items: center;
+                padding: 4px 12px;
+                border-radius: 9999px;
+                background-color: #134e4adc;
+                // background-color: #2dd4be42;
+                // color: #5eead4;
+                color: #8bffee;
+
+                .about-cont-row-prop-value {
+                    letter-spacing: 0.1rem;
+                    font-size: 13px;
+
+                    &:hover {
+                        text-shadow: 2px 2px 1px #000000;
+                    }
+                }
+            }
+
+            @media (max-width: $breakpoint-tablet) {
+                width: 100%;
+
+                .about-cont-row-prop {
+                    .about-cont-row-prop-value {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+
+            .about-cont-row-props-details {
+                .about-cont-row-props-details-top {
+                    display: flex;
+                    justify-content: center;
+
+                    .about-cont-row-prop-details-name {
+                        font-size: 40px;
+                    }
+
+                    .about-cont-row-prop-details-age {
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-cont-resume {
+        width: 100%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        gap: 7px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.17s ease-out;
+        margin: 15px 0;
+        font-family: "Monument", sans-serif;
+        letter-spacing: 0.2rem;
+
+        &:hover {
+            gap: 12px;
+
+            span {
+                border-bottom: 1px solid #5eead4;
+            }
+        }
+    }
+}

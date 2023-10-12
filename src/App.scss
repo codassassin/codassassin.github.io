@@ -1,0 +1,37 @@
+@import url('../node_modules/animate.css/');
+
+@font-face {
+    font-family: 'La Belle Aurore';
+    src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Monument';
+    src: url("./assets/fonts/Monument/MonumentExtended-Ultrabold.eot");
+    src: url("./assets/fonts/Monument/MonumentExtended-Ultraboldd41d.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Monument/MonumentExtended-Ultrabold.woff2") format("woff2"), url("./assets/fonts/Monument/MonumentExtended-Ultrabold.woff") format("woff"), url("./assets/fonts/Monument/MonumentExtended-Ultrabold.ttf") format("truetype"), url("./assets/fonts/Monument/MonumentExtended-Ultrabold.svg#MonumentExtended-Ultrabold") format("svg");
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'Monument';
+    src: url("./assets/fonts/Monument/MonumentExtended-Regular.eot");
+    src: url("./assets/fonts/Monument/MonumentExtended-Regulard41d.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/Monument/MonumentExtended-Regular.woff2") format("woff2"), url("./assets/fonts/Monument/MonumentExtended-Regular.woff") format("woff"), url("./assets/fonts/Monument/MonumentExtended-Regular.ttf") format("truetype"), url("./assets/fonts/Monument/MonumentExtended-Regular.svg#MonumentExtended-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./assets/fonts/Nunito/Nunito-VariableFont_wght.ttf') format("truetype");
+}
