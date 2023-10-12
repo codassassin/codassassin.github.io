@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cdfba081.css",
+    "main.js": "/static/js/main.42c80b53.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
+    "static/media/Nunito-VariableFont_wght.ttf": "/static/media/Nunito-VariableFont_wght.4a3eef3e0a61b7eb3eda.ttf",
+    "static/media/MonumentExtended-Regular.svg": "/static/media/MonumentExtended-Regular.00b9cc02d1aaa4a7c15f.svg",
+    "static/media/MonumentExtended-Ultrabold.svg": "/static/media/MonumentExtended-Ultrabold.d5fe015d64ad2bc55bf8.svg",
+    "static/media/logo-lines.png": "/static/media/logo-lines.962c57d904502cce843f.png",
+    "static/media/logo-lines10p.png": "/static/media/logo-lines10p.962c57d904502cce843f.png",
+    "static/media/MonumentExtended-Regular.eot": "/static/media/MonumentExtended-Regular.d473c9d747193e8b80cf.eot",
+    "static/media/MonumentExtended-Regulard41d.eot": "/static/media/MonumentExtended-Regulard41d.d473c9d747193e8b80cf.eot",
+    "static/media/MonumentExtended-Regular.ttf": "/static/media/MonumentExtended-Regular.ec0fd8702b83f9b31cc8.ttf",
+    "static/media/MonumentExtended-Ultrabold.eot": "/static/media/MonumentExtended-Ultrabold.a06817488a865c8353e2.eot",
+    "static/media/MonumentExtended-Ultraboldd41d.eot": "/static/media/MonumentExtended-Ultraboldd41d.a06817488a865c8353e2.eot",
+    "static/media/MonumentExtended-Ultrabold.ttf": "/static/media/MonumentExtended-Ultrabold.c47d3e52c00e652e0da2.ttf",
+    "static/media/MonumentExtended-Regular.woff": "/static/media/MonumentExtended-Regular.ad23d176993f74011b52.woff",
+    "static/media/MonumentExtended-Ultrabold.woff": "/static/media/MonumentExtended-Ultrabold.857c5b1cd15eb49564d5.woff",
+    "static/media/Souvik_Chatterjee_resume.pdf": "/static/media/Souvik_Chatterjee_resume.5350daeb9d9cdde95359.pdf",
+    "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/MonumentExtended-Regular.woff2": "/static/media/MonumentExtended-Regular.b92b5ccf4de95fcf8e0b.woff2",
+    "static/media/MonumentExtended-Ultrabold.woff2": "/static/media/MonumentExtended-Ultrabold.8aea681d04e986c3ea60.woff2",
+    "static/media/logo-s.png": "/static/media/logo-s.bfc9f81846bda5218dab.png",
+    "static/media/movie.png": "/static/media/movie.b04ce2d7077eb531c00b.png",
+    "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/index.html",
+    "main.cdfba081.css.map": "/static/css/main.cdfba081.css.map",
+    "main.42c80b53.js.map": "/static/js/main.42c80b53.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cdfba081.css",
+    "static/js/main.42c80b53.js"
+  ]
+}
