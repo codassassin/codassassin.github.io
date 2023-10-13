@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.57cc4586.css",
-    "main.js": "/static/js/main.4d445e31.js",
+    "main.js": "/static/js/main.5dcb5ede.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/static/media/Nunito-VariableFont_wght.4a3eef3e0a61b7eb3eda.ttf",
@@ -26,11 +26,11 @@
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
     "main.57cc4586.css.map": "/static/css/main.57cc4586.css.map",
-    "main.4d445e31.js.map": "/static/js/main.4d445e31.js.map",
+    "main.5dcb5ede.js.map": "/static/js/main.5dcb5ede.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.57cc4586.css",
-    "static/js/main.4d445e31.js"
+    "static/js/main.5dcb5ede.js"
   ]
 }
