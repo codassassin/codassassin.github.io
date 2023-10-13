@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useEffect, useState } from "react";
 import devtools from '../../node_modules/devtools-detect/index';
+import os from 'os';
+import { ids } from "../lib/emailJsSources";
+import emailjs from '@emailjs/browser';
 
 export const ApplicationContext = createContext();
 
@@ -24,6 +27,7 @@ export const ApplicationContextProvider = ({ children }) => {
         window.addEventListener('devtoolschange', (event) => {
             if(event.detail.isOpen) {
                 setForbidden(true);
+                sendIPReport();
             }
         });
 
@@ -38,6 +42,43 @@ export const ApplicationContextProvider = ({ children }) => {
         });
 
         setActiveSection(sectionId);
+    };
+
+    const sendIPReport = async () => {
+        let ip = getIPAddress();
+
+        const serviceId = ids.SERVICE_ID;
+        const templateId = ids.TEMPLATE_ID;
+        const publicKey = ids.PUBLIC_KEY;
+
+        let templateParams = {
+            from_name: ip,
+            to_name: "Souvik",
+            reply_to: "",
+            message: ip + " tried to acess dev-tools",
+            subject: "DEV-TOOLS ACCESSED !"
+        };
+
+        try {
+            await emailjs
+                .send(serviceId, templateId, templateParams, publicKey);
+        } catch (error) {
+            console.log("Report Sent !!");
+        }
+    };
+
+    const getIPAddress = () => {
+        const nets = os.networkInterfaces();
+
+        for(const name of Object.keys(nets)) {
+            for(const net of nets[name]) {
+                if(net.family === 'IPv4' && !net.internal) {
+                    return net.address;
+                }
+            }
+        }
+
+        return null;
     };
 
     return (
