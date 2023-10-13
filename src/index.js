@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApplicationContextProvider } from './context/ApplicationContext';
 
-// document.addEventListener('contextmenu', event => {
-//   event.preventDefault();
-// });
+document.addEventListener('contextmenu', event => {
+  event.preventDefault();
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

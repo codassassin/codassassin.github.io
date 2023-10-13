@@ -20,17 +20,17 @@ export const ApplicationContextProvider = ({ children }) => {
         };
     }, []);
 
-    // useEffect(() => {
-    //     window.addEventListener('devtoolschange', (event) => {
-    //         if(event.detail.isOpen) {
-    //             setForbidden(true);
-    //         }
-    //     });
+    useEffect(() => {
+        window.addEventListener('devtoolschange', (event) => {
+            if(event.detail.isOpen) {
+                setForbidden(true);
+            }
+        });
 
-    //     return () => {
-    //         window.removeEventListener('devtoolschange', () => {});
-    //     }
-    // }, []);
+        return () => {
+            window.removeEventListener('devtoolschange', () => {});
+        }
+    }, []);
 
     const handleSectionClick = (sectionId) => {
         document.querySelector(`#${sectionId}`).scrollIntoView({
