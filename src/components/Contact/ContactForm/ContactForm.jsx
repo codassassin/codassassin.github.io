@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './ContactForm.scss';
-import { Input } from '@mui/material';
 import { ids } from '../../../lib/emailJsSources';
 import emailjs from '@emailjs/browser';
 import Sending from '../../../assets/animations/Sending/Sending';

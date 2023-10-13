@@ -4,6 +4,8 @@ $breakpoint-tablet: 768px;
 $breakpoint-laptop: 1366px;
 $breakpoint-desktop: 1920px;
 
+$border-radius: 5px;
+
 form {
     width: 100%;
     max-width: 500px;
@@ -25,7 +27,7 @@ form {
 
             input {
                 border: none;
-                border-radius: 6px;
+                border-radius: $border-radius;
                 background-color: #F0F0F0;
                 padding: 0 15px;
                 font-family: 'Nunito';
@@ -64,7 +66,7 @@ form {
 
             textarea {
                 width: 100%;
-                border-radius: 6px;
+                border-radius: $border-radius;
                 border: none;
                 padding: 15px 16px;
                 font-size: 16px;
