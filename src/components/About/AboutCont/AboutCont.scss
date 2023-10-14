@@ -82,6 +82,35 @@ $breakpoint-desktop: 1920px;
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    position: relative;
+
+                    span {
+                        line-height: 15px;
+                        border-bottom: 1px dashed transparent;
+                        transition: all 0.3s ease;
+                        cursor: text;
+
+                        &:hover {
+                            border-bottom: 1px dashed #fff;
+                        }
+                    }
+
+                    .copied-component {
+                        background-color: white;
+                        color: #000000;
+                        font-size: 7px;
+                        font-weight: 700;
+                        padding: 0px 4px;
+                        border-radius: 3px;
+                        position: absolute;
+                        top: 20px;
+                        left: 50%;
+                        border: none;
+                        height: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }
