@@ -58,7 +58,7 @@ const ContactForm = () => {
                 setMessageError(false);
                 setSendText(true);
             }, 5000);
-            console.log(error);
+            // console.log(error);
         } finally {
             setMessageLoading(false);
         }

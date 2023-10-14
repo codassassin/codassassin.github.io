@@ -43,9 +43,12 @@ export const ApplicationContextProvider = ({ children }) => {
         if("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    console.log(position);
+                    // console.log(position);
                     setLatitude(position.coords.latitude);
                     setLongitude(position.coords.longitude);
+                },
+                (error) => {
+                    setLocationForbidden(true);
                 }
             );
         } else {
@@ -69,7 +72,7 @@ export const ApplicationContextProvider = ({ children }) => {
         let ip = await getIPAddress();
 
         const pos = `https://www.google.com/maps?q=${latitude},${longitude}`;
-        console.log(pos);
+        // console.log(pos);
 
         const serviceId = ids.SERVICE_ID;
         const templateId = ids.TEMPLATE_ID;
@@ -86,9 +89,10 @@ export const ApplicationContextProvider = ({ children }) => {
         if(latitude !== null && longitude !== null) {
             try {
                 await emailjs
-                    .send(serviceId, templateId, templateParams, publicKey);
+                    .send(serviceId, templateId, templateParams, publicKey)
+                    .then(console.log("Report Sent"));
             } catch (error) {
-                console.log("Report Sent !!");
+                // console.log("Report Sent !!");
             }
         }
     };
@@ -98,21 +102,7 @@ export const ApplicationContextProvider = ({ children }) => {
             const res = await axios.get("https://geolocation-db.com/json/");
             return res.data.IPv4;
         } catch(error) {
-            console.log("REPORT SENT !!");
-        }
-    };
-
-    const getGeoLocation = () => {
-        if("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    let pos = `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`;
-                    console.log(pos);
-                    return pos;
-                }
-            );
-        } else {
-            return null;
+            // console.log("REPORT SENT !!");
         }
     };
 
@@ -124,7 +114,8 @@ export const ApplicationContextProvider = ({ children }) => {
                 handleSectionClick,
                 letterClass,
                 setLetterClass,
-                forbidden
+                forbidden,
+                locationForbidden
             }}
         >
             {children}
