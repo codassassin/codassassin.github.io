@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import './Sidebar.scss';
 import LogoS from '../../assets/images/logo-lines10p.png';
