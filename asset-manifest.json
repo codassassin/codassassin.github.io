@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b47ac165.css",
-    "main.js": "/static/js/main.047ecb1a.js",
+    "main.css": "/static/css/main.d17e1e7e.css",
+    "main.js": "/static/js/main.1307f914.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/static/media/Nunito-VariableFont_wght.4a3eef3e0a61b7eb3eda.ttf",
@@ -25,12 +25,12 @@
     "static/media/movie.png": "/static/media/movie.b04ce2d7077eb531c00b.png",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.b47ac165.css.map": "/static/css/main.b47ac165.css.map",
-    "main.047ecb1a.js.map": "/static/js/main.047ecb1a.js.map",
+    "main.d17e1e7e.css.map": "/static/css/main.d17e1e7e.css.map",
+    "main.1307f914.js.map": "/static/js/main.1307f914.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b47ac165.css",
-    "static/js/main.047ecb1a.js"
+    "static/css/main.d17e1e7e.css",
+    "static/js/main.1307f914.js"
   ]
 }
