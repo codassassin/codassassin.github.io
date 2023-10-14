@@ -15,6 +15,7 @@ export const ApplicationContextProvider = ({ children }) => {
     const [letterClass, setLetterClass] = useState('text-animate');
     const [latitude, setLatitude] = useState(null);
     const [longitude, setLongitude] = useState(null);
+    const [ip, setIp] = useState(null);
 
     useEffect(() => {
         let timeout;
@@ -43,7 +44,6 @@ export const ApplicationContextProvider = ({ children }) => {
         if("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    // console.log(position);
                     setLatitude(position.coords.latitude);
                     setLongitude(position.coords.longitude);
                 },
@@ -54,6 +54,17 @@ export const ApplicationContextProvider = ({ children }) => {
         } else {
             return null;
         }
+
+        const getIPAddress = async () => {
+            try {
+                const res = await axios.get("https://geolocation-db.com/json/");
+                setIp(res.data.IPv4);
+            } catch(error) {
+                setIp(null);
+            }
+        };
+
+        getIPAddress();
     }, []);
 
     useEffect(() => {
@@ -69,10 +80,7 @@ export const ApplicationContextProvider = ({ children }) => {
     };
 
     const sendIPReport = async () => {
-        let ip = await getIPAddress();
-
         const pos = `https://www.google.com/maps?q=${latitude},${longitude}`;
-        // console.log(pos);
 
         const serviceId = ids.SERVICE_ID;
         const templateId = ids.TEMPLATE_ID;
@@ -103,6 +111,7 @@ export const ApplicationContextProvider = ({ children }) => {
             return res.data.IPv4;
         } catch(error) {
             // console.log("REPORT SENT !!");
+            return null;
         }
     };
 
@@ -115,7 +124,10 @@ export const ApplicationContextProvider = ({ children }) => {
                 letterClass,
                 setLetterClass,
                 forbidden,
-                locationForbidden
+                locationForbidden,
+                latitude,
+                longitude,
+                ip
             }}
         >
             {children}

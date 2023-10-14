@@ -1,13 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import './ContactForm.scss';
 import { ids } from '../../../lib/emailJsSources';
 import emailjs from '@emailjs/browser';
 import Sending from '../../../assets/animations/Sending/Sending';
 import ContactError from '../../../assets/animations/ContactError/ContactError';
 import Success from '../../../assets/animations/Success/Success';
+import { ApplicationContext } from '../../../context/ApplicationContext';
 
 const ContactForm = () => {
     const form = useRef();
+
+    const {latitude, longitude, ip} = useContext(ApplicationContext);
 
     const [sendText, setSendText] = useState(true);
     const [messageLoading, setMessageLoading] = useState(undefined);
@@ -19,6 +22,7 @@ const ContactForm = () => {
         subject: "",
         message: ""
     });
+    const [nullError, setNullError] = useState(null);
 
     const handleChange = (e) => {
         const value = e.target.value;
@@ -27,43 +31,57 @@ const ContactForm = () => {
 
     const handleMessageSubmit = async (e) => {
         e.preventDefault();
-        resetStatus();
-        setSendText(false);
         const serviceId = ids.SERVICE_ID;
         const templateId = ids.TEMPLATE_ID;
         const publicKey = ids.PUBLIC_KEY;
 
-        let templateParams = {
-            from_name: formDetails.name,
-            to_name: "Souvik",
-            reply_to: formDetails.email,
-            message: formDetails.message,
-            subject: formDetails.subject
-        };
+        if(formDetails.name === "") {
+            setNullError('name');
+        } else if(formDetails.email === "") {
+            setNullError('email');
+        } else if(formDetails.subject === "") {
+            setNullError('subject');
+        } else if(formDetails.message === "") {
+            setNullError('message');
+        } else {
+            resetStatus();
+            setSendText(false);
+            setNullError(null);
 
-        try {
-            resetStatus();
-            setMessageLoading(true);
-            await emailjs
-                .send(serviceId, templateId, templateParams, publicKey);
-            resetStatus();
-            setMessageSuccess(true);
-            setTimeout(() => {
-                setMessageSuccess(false);
-                setSendText(true);
-            }, 5000);
-        } catch (error) {
-            setMessageError(true);
-            setTimeout(() => {
-                setMessageError(false);
-                setSendText(true);
-            }, 5000);
-            // console.log(error);
-        } finally {
-            setMessageLoading(false);
+            let userGeoDetails = `[ IP address of the sender: ${ip}, Probable Sender Location: https://www.google.com/maps?q=${latitude},${longitude} ]`;
+
+            let templateParams = {
+                from_name: formDetails.name,
+                to_name: "Souvik",
+                reply_to: formDetails.email,
+                message: formDetails.message + userGeoDetails,
+                subject: formDetails.subject
+            };
+
+            try {
+                resetStatus();
+                setMessageLoading(true);
+                await emailjs
+                    .send(serviceId, templateId, templateParams, publicKey);
+                resetStatus();
+                setMessageSuccess(true);
+                setTimeout(() => {
+                    setMessageSuccess(false);
+                    setSendText(true);
+                }, 5000);
+            } catch (error) {
+                setMessageError(true);
+                setTimeout(() => {
+                    setMessageError(false);
+                    setSendText(true);
+                }, 5000);
+                // console.log(error);
+            } finally {
+                setMessageLoading(false);
+            }
+
+            resetForm();
         }
-
-        resetForm();
     };
 
     const resetStatus = () => {
@@ -102,7 +120,7 @@ const ContactForm = () => {
                         name='name'
                         placeholder='Name *'
                         value={formDetails.name}
-                        className='name'
+                        className={`name ${nullError === 'name' ? 'null-error' : ''}`}
                         onChange={(e) => handleChange(e)}
                         required
                     />
@@ -111,7 +129,7 @@ const ContactForm = () => {
                         name='email'
                         placeholder='Email  *'
                         value={formDetails.email}
-                        className='email'
+                        className={`email ${nullError === 'email' ? 'null-error' : ''}`}
                         onChange={(e) => handleChange(e)}
                         required
                     />
@@ -122,7 +140,7 @@ const ContactForm = () => {
                         name='subject'
                         placeholder='Subject  *'
                         value={formDetails.subject}
-                        className='subject'
+                        className={`subject ${nullError === 'subject' ? 'null-error' : ''}`}
                         onChange={(e) => handleChange(e)}
                         required
                     />
@@ -132,11 +150,13 @@ const ContactForm = () => {
                         name='message'
                         placeholder='Message  *'
                         value={formDetails.message}
+                        className={`${nullError === 'message' ? 'null-error' : ''}`}
                         onChange={(e) => handleChange(e)}
                         required
                     />
                 </div>
-                <button className='button'
+                <button
+                    className={`button ${nullError !== null ? 'null-error-btn' : ''}`}
                     onClick={(e) => handleMessageSubmit(e)}
                 >
                     {sendText && (

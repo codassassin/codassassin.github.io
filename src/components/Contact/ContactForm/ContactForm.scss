@@ -35,6 +35,12 @@ form {
                 height: 50px;
                 font-size: 16px;
 
+                &.null-error {
+                    &::placeholder {
+                        color: rgba(255, 0, 0, 0.85);
+                    }
+                }
+
                 &.name, &.email {
                     width: 43%;
                 }
@@ -73,6 +79,12 @@ form {
                 color: #333;
                 background-color: #F0F0F0;
                 font-family: Roboto, Helvetica, Arial, sans-serif;
+
+                &.null-error {
+                    &::placeholder {
+                        color: rgba(255, 0, 0, 0.85);
+                    }
+                }
 
                 &::placeholder {
                     font-family: Roboto, Helvetica, Arial, sans-serif;
