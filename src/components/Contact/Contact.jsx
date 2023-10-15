@@ -4,6 +4,7 @@ import '../../pages/pages.scss';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import { ApplicationContext } from '../../context/ApplicationContext';
 import ContactForm from './ContactForm/ContactForm';
+import FormImage from '../../assets/images/form-image.jpg';
 
 const Contact = () => {
     const {letterClass} = useContext(ApplicationContext);

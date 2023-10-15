@@ -1,5 +1,9 @@
 .sidebar {
-    background: #181818;
+    // background: #181818;
+    background-image: url('../../assets/images/form-image-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 11%;
     width: 60px;
     height: 100%;
     position: fixed;

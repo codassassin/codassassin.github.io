@@ -20,16 +20,17 @@ const Sidebar = () => {
             </div>
             <nav>
                 <Link activeClass='active' className={activeSection === 'home' ? 'active' : ''} smooth={true} spy to='home' href='#home'>
-                    <FontAwesomeIcon icon={faHome} color='#4d4d4e'/>
+                    {/* <FontAwesomeIcon icon={faHome} color='#4d4d4e'/> */}
+                    <FontAwesomeIcon icon={faHome} color='lightblue'/>
                 </Link>
                 <Link activeClass='active' className={`about-link ${activeSection === 'about' ? 'active' : ''} `} smooth={true} spy to='about' href='#about'>
-                    <FontAwesomeIcon icon={faUser} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faUser} color='lightblue'/>
                 </Link>
                 <Link activeClass='active' className={`blog-link ${activeSection === 'blog' ? 'active' : ''} `} smooth={true} spy to='blog' href='#blog'>
-                    <FontAwesomeIcon icon={faBlog} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faBlog} color='lightblue'/>
                 </Link>
                 <Link activeClass='active' className={`contact-link ${activeSection === 'contact' ? 'active' : ''} `} smooth={true} spy to='contact' href='#contact'>
-                    <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e'/>
+                    <FontAwesomeIcon icon={faEnvelope} color='lightblue'/>
                 </Link>
             </nav>
 
