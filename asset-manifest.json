@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.d17e1e7e.css",
-    "main.js": "/static/js/main.1307f914.js",
+    "main.css": "/static/css/main.9639ada1.css",
+    "main.js": "/static/js/main.41fe3ee3.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/form-image.jpg": "/static/media/form-image.f28dfb875258317db03a.jpg",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
     "static/media/Nunito-VariableFont_wght.ttf": "/static/media/Nunito-VariableFont_wght.4a3eef3e0a61b7eb3eda.ttf",
+    "static/media/form-image-1.jpg": "/static/media/form-image-1.87d9edb9133dc2707f45.jpg",
     "static/media/MonumentExtended-Regular.svg": "/static/media/MonumentExtended-Regular.00b9cc02d1aaa4a7c15f.svg",
     "static/media/MonumentExtended-Ultrabold.svg": "/static/media/MonumentExtended-Ultrabold.d5fe015d64ad2bc55bf8.svg",
     "static/media/logo-lines.png": "/static/media/logo-lines.962c57d904502cce843f.png",
@@ -25,12 +27,12 @@
     "static/media/movie.png": "/static/media/movie.b04ce2d7077eb531c00b.png",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.d17e1e7e.css.map": "/static/css/main.d17e1e7e.css.map",
-    "main.1307f914.js.map": "/static/js/main.1307f914.js.map",
+    "main.9639ada1.css.map": "/static/css/main.9639ada1.css.map",
+    "main.41fe3ee3.js.map": "/static/js/main.41fe3ee3.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d17e1e7e.css",
-    "static/js/main.1307f914.js"
+    "static/css/main.9639ada1.css",
+    "static/js/main.41fe3ee3.js"
   ]
 }
