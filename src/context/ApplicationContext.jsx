@@ -35,6 +35,10 @@ export const ApplicationContextProvider = ({ children }) => {
             }
         });
 
+        if(devtools.isOpen) {
+            setForbidden(true);
+        }
+
         return () => {
             window.removeEventListener('devtoolschange', () => {});
         }
