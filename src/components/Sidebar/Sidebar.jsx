@@ -21,6 +21,7 @@ const Sidebar = () => {
             <nav>
                 <Link activeClass='active' className={activeSection === 'home' ? 'active' : ''} smooth={true} spy to='home' href='#home'>
                     {/* <FontAwesomeIcon icon={faHome} color='#4d4d4e'/> */}
+                    {/* <FontAwesomeIcon icon={faHome} color='#fff'/> */}
                     <FontAwesomeIcon icon={faHome} color='lightblue'/>
                 </Link>
                 <Link activeClass='active' className={`about-link ${activeSection === 'about' ? 'active' : ''} `} smooth={true} spy to='about' href='#about'>

@@ -15,6 +15,8 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -25,15 +27,20 @@ body {
   height: 100%;
   width: 100%;
 
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   overflow-y: scroll;
+
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
 
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+  scrollbar-width: 0;
+  background: transparent;
 }
 
 a {
