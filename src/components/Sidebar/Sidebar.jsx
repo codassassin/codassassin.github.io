@@ -16,7 +16,7 @@ const Sidebar = () => {
         <div className='sidebar'>
             <div className='logo'>
                 <img src={LogoS} alt='logo'/>
-                <img src={LogoSubtitle} alt='logo name' className='sub-logo'/>
+                {/* <img src={LogoSubtitle} alt='logo name' className='sub-logo'/> */}
             </div>
             <nav>
                 <Link activeClass='active' className={activeSection === 'home' ? 'active' : ''} smooth={true} spy to='home' href='#home'>
