@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b955f15a.css",
-    "main.js": "/static/js/main.169cff0a.js",
+    "main.js": "/static/js/main.cafbe32c.js",
     "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
     "static/media/form-image.jpg": "/static/media/form-image.f28dfb875258317db03a.jpg",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/static/media/Inter-VariableFont_slnt,wght.aadb65ac45347ff46699.ttf",
@@ -18,7 +18,7 @@
     "static/media/MonumentExtended-Ultrabold.ttf": "/static/media/MonumentExtended-Ultrabold.c47d3e52c00e652e0da2.ttf",
     "static/media/MonumentExtended-Regular.woff": "/static/media/MonumentExtended-Regular.ad23d176993f74011b52.woff",
     "static/media/MonumentExtended-Ultrabold.woff": "/static/media/MonumentExtended-Ultrabold.857c5b1cd15eb49564d5.woff",
-    "static/media/Souvik_Chatterjee_resume.pdf": "/static/media/Souvik_Chatterjee_resume.5350daeb9d9cdde95359.pdf",
+    "static/media/Souvik_Chatterjee_resume.pdf": "/static/media/Souvik_Chatterjee_resume.795d816b2da9a92b97f0.pdf",
     "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/MonumentExtended-Regular.woff2": "/static/media/MonumentExtended-Regular.b92b5ccf4de95fcf8e0b.woff2",
     "static/media/MonumentExtended-Ultrabold.woff2": "/static/media/MonumentExtended-Ultrabold.8aea681d04e986c3ea60.woff2",
@@ -27,11 +27,11 @@
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
     "main.b955f15a.css.map": "/static/css/main.b955f15a.css.map",
-    "main.169cff0a.js.map": "/static/js/main.169cff0a.js.map",
+    "main.cafbe32c.js.map": "/static/js/main.cafbe32c.js.map",
     "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b955f15a.css",
-    "static/js/main.169cff0a.js"
+    "static/js/main.cafbe32c.js"
   ]
 }
