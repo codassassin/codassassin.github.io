@@ -12,6 +12,7 @@ export const ApplicationContextProvider = ({ children }) => {
     const [activeSection, setActiveSection] = useState(null);
     const [forbidden, setForbidden] = useState(false);
     const [locationForbidden, setLocationForbidden] = useState(false);
+    // const [locationForbidden, setLocationForbidden] = useState(true);
     const [letterClass, setLetterClass] = useState('text-animate');
     const [latitude, setLatitude] = useState(null);
     const [longitude, setLongitude] = useState(null);
@@ -31,12 +32,14 @@ export const ApplicationContextProvider = ({ children }) => {
     useEffect(() => {
         window.addEventListener('devtoolschange', (event) => {
             if(event.detail.isOpen) {
-                setForbidden(true);
+                // setForbidden(true);
+                setForbidden(false);
             }
         });
 
         if(devtools.isOpen) {
-            setForbidden(true);
+            // setForbidden(true);
+            setForbidden(false);
         }
 
         return () => {
@@ -53,6 +56,7 @@ export const ApplicationContextProvider = ({ children }) => {
                 },
                 (error) => {
                     setLocationForbidden(true);
+                    // setLocationForbidden(false);
                 }
             );
         } else {

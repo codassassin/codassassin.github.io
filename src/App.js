@@ -35,6 +35,7 @@ function App() {
               <>
                 {forbidden ? (
                   <DevToolsForbidden />
+                  // <></>
                 ) : (
                   <Main />
                 )}
